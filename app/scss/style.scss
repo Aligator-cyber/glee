@@ -1,5 +1,84 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
-@import 'media';
+   @import 'vars';
+   @import 'fonts';
+   @import 'reset';
+   @import 'global';
+   .header {
+       padding: 52px 0 54px;
+       &__inner {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+   }
+   
+   .menu {
+       &__list {
+           display: flex;
+       }
+       &__item:not(:last-child) {
+           margin-right: 35px;
+       }
+       &__link {
+           @extend %Rubick-500;
+           color: #436372;
+           font-size: 15px;
+           line-height: 0.8;
+       }
+   }
+   
+   .user-nav {
+       display: flex;
+       &__link {
+           position: relative;
+       }
+       &__link-search {
+           background-color: #edf1f4;
+           height: 52px;
+           width: 52px;
+           border-radius: 50%;
+           margin-right: 20px;
+           transition: background-color .3s;
+       }
+       &__link-search:hover {
+           background-color: #a3bbc8;
+       }
+       &__link--like {
+           background-color: #fcd7b6;
+           height: 52px;
+           width: 90px;
+           border-radius: 45% 0 0 45%;
+       }
+       &__link--shopping {
+           background-color: #fcd7b6;
+           height: 52px;
+           width: 90px;
+           border-radius: 0 45% 45% 0;
+           margin-right: 20px;
+       }
+       &__link--points {
+           background-color: #edf1f4;
+           height: 52px;
+           width: 52px;
+           border-radius: 50%;
+           margin-right: 20px;
+           transition: background-color .3s;
+       }
+       &__link--points:hover {
+           background-color: #a3bbc8;
+       }
+       &__num {
+           @extend %DMSans-400;
+           position: absolute;
+           width: 16px;
+           height: 16px;
+           border-radius: 50%;
+           background-color: #fff;
+           top: -10px;
+           left: 10px;
+           font-size: 10px;
+           text-align: center;
+           line-height: 1.4;
+       }
+   }
+   
+   @import 'media';
