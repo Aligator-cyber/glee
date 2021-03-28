@@ -5,7 +5,7 @@
 @import 'global';
 @import 'media';
 .header {
-    padding: 52px 0 54px;
+    padding: 52px 0 25px;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -16,6 +16,7 @@
 .menu {
     &__list {
         display: flex;
+        margin-left: 143px;
     }
     &__item:not(:last-child) {
         margin-right: 35px;
@@ -232,7 +233,7 @@
 }
 
 .top-slider {
-    padding-top: 50px;
+    padding-top: 25px;
     &__inner {
         display: flex;
         background-color: #fcd7b6;
@@ -302,4 +303,84 @@
 
 .slick-active button {
     background-color: #ffffff;
+}
+
+.positives {
+    &__inner {
+        padding: 40px 0 40px;
+        display: flex;
+        justify-content: space-around;
+        background-color: #fef7f0;
+    }
+    &__item {
+        margin-left: 200px;
+        min-width: 345px;
+    }
+    &__item:not(:last-child) {
+        border-right: 1px solid #e8e4df;
+    }
+    &__title {
+        @extend %DMSans-700;
+        line-height: 2.2;
+        color: #414141;
+        font-size: 18px;
+    }
+    &__text {
+        max-width: 205px;
+        @extend %DMSans-400;
+        font-size: 16px;
+        color: #585858;
+        line-height: 1.9;
+    }
+    &__text-width {
+        max-width: 220px;
+    }
+}
+
+.positives__item-support {
+    position: relative;
+}
+
+.positives__item-support::before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/icons/hours.svg);
+    height: 55px;
+    width: 55px;
+    top: 7px;
+    left: -76px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.positives__item-delivery {
+    position: relative;
+}
+
+.positives__item-delivery::before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/icons/truck.svg);
+    height: 55px;
+    width: 55px;
+    top: 16px;
+    left: -82px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.positives__item-secure {
+    position: relative;
+}
+
+.positives__item-secure::before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/icons/img.svg);
+    height: 55px;
+    width: 55px;
+    top: 7px;
+    left: -76px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
