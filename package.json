@@ -29,6 +29,7 @@
     "sync": "^0.2.5"
   },
   "dependencies": {
-    "browser-sync": "^2.26.14"
+    "browser-sync": "^2.26.14",
+    "slick-carousel": "^1.8.1"
   }
 }
