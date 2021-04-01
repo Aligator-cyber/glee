@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="images/icons/unnamed.ico" type="image/x-icon">
     <title>Glee | Home</title>
 </head>
 
@@ -39,14 +40,19 @@
                     </ul>
                 </nav>
                 <div class="user-nav">
-                    <a class="user-nav__search" href="#"></a>
+                    <a class="user-nav__search" href="#">
+                        <span class="visually-hidden">Search</span>
+                    </a>
                     <a class="user-nav__like" href="#">
                         <span class="user-nav__num">0</span>
+                        <span class="visually-hidden">Favorites</span>
                     </a>
                     <a class="user-nav__shopping" href="#">
                         <span class="user-nav__num">0</span>
+                        <span class="visually-hidden">Basket</span>
                     </a>
                     <a class="user-nav__points" href="#"></a>
+                    <span class="visually-hidden">Menu</span>
                 </div>
             </div>
         </div>
@@ -63,7 +69,10 @@
                             </p>
                             <a class="top-slider__link" href="#">Shop Now</a>
                         </div>
-                        <img class="top-slider__img top-slider__img-first" src="images/slider/1.png" alt="Sofa">
+                        <div class="top-slider__image">
+                            <img class="top-slider__img" src="images/slider/1.png" alt="Sofa">
+                        </div>
+
                     </div>
 
                     <div class="top-slider__item">
@@ -73,7 +82,10 @@
                             </p>
                             <a class="top-slider__link" href="#">Shop Now</a>
                         </div>
-                        <img class="top-slider__img top-slider__img-first" src="images/slider/1.png" alt="Sofa">
+                        <div class="top-slider__image">
+                            <img class="top-slider__img" src="images/slider/1.png" alt="Sofa">
+                        </div>
+
                     </div>
 
                     <div class="top-slider__item">
@@ -83,7 +95,10 @@
                             </p>
                             <a class="top-slider__link" href="#">Shop Now</a>
                         </div>
-                        <img class="top-slider__img top-slider__img-first" src="images/slider/1.png" alt="Sofa">
+                        <div class="top-slider__image">
+                            <img class="top-slider__img" src="images/slider/1.png" alt="Sofa">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -109,6 +124,195 @@
                 </div>
             </div>
         </div>
+        <section class="product">
+            <div class="wrapper">
+                <h2 class="product__title">Products of the week</h2>
+                <div class="product__filter-btns">
+                    <button type="button" class="product__btn" data-filter="all">All</button>
+                    <button type="button" class="product__btn" data-filter=".category-с">Furnitures</button>
+                    <button type="button" class="product__btn" data-filter=".category-b">Chairs</button>
+                    <button type="button" class="product__btn" data-filter=".category-a">Lighting</button>
+                    <button type="button" class="product__btn" data-filter=".category-d">Decor</button>
+                </div>
+                <div class="product__items">
+
+                    <div class="product__item mix category-a">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/1.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">Wooden radio</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="product__item mix category-b">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/2.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">Wooden chair</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="product__item mix category-b">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/3.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">White chair</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="product__item mix category-a">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/4.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">Retro table</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="product__item mix category-d">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/5.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">Wooden radio</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="product__item mix category-b">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/6.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">Wooden chair</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="product__item mix category-с">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/7.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">White chair</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="product__item mix category-с">
+                        <div class="product__icons">
+                            <a class="product__search product__icon" href="#">
+                                <span class="visually-hidden">Search</span>
+                            </a>
+                            <a class="product__shop product__icon" href="#">
+                                <span class="visually-hidden">Basket</span>
+                            </a>
+                            <a class="product__like product__icon" href="#">
+                                <span class="visually-hidden">Favorites</span>
+                            </a>
+                        </div>
+                        <a class="product__link" href="#">
+                            <img class="product__img" src="images/main/product/8.jpg" alt="chair">
+                            <div class="product__box">
+                                <h3 class="product__name">Retro table</h3>
+                                <span class="product__price">$29.00</span>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
@@ -199,6 +403,7 @@
 
 
 
+    <script src="js/mixitup.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 
