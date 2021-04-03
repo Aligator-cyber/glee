@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Aligator-cyber/test#readme",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser": "^0.2.6",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
