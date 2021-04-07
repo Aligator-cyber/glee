@@ -1,5 +1,5 @@
             @font-face {
-                font-family: 'DMSans-Bold';
+                font-family: 'DMSans';
                 font-weight: 700;
                 font-style: normal;
                 font-display: swap;
@@ -7,7 +7,7 @@
             }
             
             @font-face {
-                font-family: 'DMSans-Medium';
+                font-family: 'DMSans';
                 font-weight: 500;
                 font-style: normal;
                 font-display: swap;
@@ -15,7 +15,7 @@
             }
             
             @font-face {
-                font-family: 'DMSans-Regular';
+                font-family: 'DMSans';
                 font-weight: 400;
                 font-style: normal;
                 font-display: swap;
@@ -23,25 +23,25 @@
             }
             
             @font-face {
-                font-family: 'Rubick-Bold';
+                font-family: 'Rubik';
                 font-weight: 700;
                 font-style: normal;
                 font-display: swap;
-                src: local('Rubick-Bold'), url('../fonts/Rubick-Bold.woff2') format('woff2'), url('../fonts/Rubick-Bold.woff') format('woff');
+                src: local('Rubik-Bold'), url('../fonts/Rubik-Bold.woff2') format('woff2'), url('../fonts/Rubik-Bold.woff') format('woff');
             }
             
             @font-face {
-                font-family: 'Rubick-Medium';
+                font-family: 'Rubik';
                 font-weight: 500;
                 font-style: normal;
                 font-display: swap;
-                src: local('Rubick-Medium'), url('../fonts/Rubick-Medium.woff2') format('woff2'), url('../fonts/Rubick-Medium.woff') format('woff');
+                src: local('Rubik-Medium'), url('../fonts/Rubik-Medium.woff2') format('woff2'), url('../fonts/Rubik-Medium.woff') format('woff');
             }
             
             @font-face {
-                font-family: 'Rubick-Regular';
+                font-family: 'Rubik';
                 font-weight: 400;
                 font-style: normal;
                 font-display: swap;
-                src: local('Rubick-Regular'), url('../fonts/Rubick-Regular.woff2') format('woff2'), url('../fonts/Rubick-Regular.woff') format('woff');
+                src: local('Rubik-Regular'), url('../fonts/Rubik-Regular.woff2') format('woff2'), url('../fonts/Rubik-Regular.woff') format('woff');
             }

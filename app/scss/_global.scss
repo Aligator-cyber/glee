@@ -37,3 +37,61 @@ main {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: transparent;
+}
+
+link {
+    outline: transparent;
+}
+
+.button {
+    @extend %Rubik-500;
+    font-size: 15px;
+    line-height: 0.9;
+    color: #fff;
+    background-color: #a3bbc8;
+    padding: 23px 100px 23px 30px;
+    display: inline-block;
+    @extend %text-wrap;
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+    &:active {
+        background-color: #373CEB;
+    }
+}
+
+.titles {
+    text-align: center;
+    margin-bottom: 22px;
+    @extend %DMSans-700;
+    font-size: 36px;
+    color: #191919;
+    @extend %text-wrap;
+}
+
+.filter-btn {
+    border: none;
+    background-color: transparent;
+    @extend %DMSans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    padding: 0;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+        opacity: 0.7;
+    }
+    &:active {
+        color: #000;
+    }
+}
+
+img {
+    object-fit: cover;
+}

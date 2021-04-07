@@ -13,19 +13,35 @@
     }
 }
 
+.logo {
+    max-width: 200px;
+    &__img {
+        max-width: 100%;
+    }
+}
+
 .menu {
+    margin-bottom: 7px;
     &__list {
         display: flex;
         margin-left: 143px;
     }
     &__item:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 35px;
     }
     &__link {
-        @extend %Rubick-500;
+        @extend %Rubik-500;
         color: #436372;
         font-size: 15px;
-        line-height: 0.8;
+        line-height: 1.3;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+            outline: transparent;
+        }
+        &:active {
+            color: #000;
+        }
     }
 }
 
@@ -36,63 +52,62 @@
         height: 52px;
         width: 52px;
         border-radius: 50%;
-        margin-right: 20px;
+        margin-right: 14px;
         transition: background-color .3s;
         position: relative;
-    }
-    &__search::before {
-        position: absolute;
-        content: '';
-        background-image: url(../images/icons/search-icon.svg);
-        width: 17px;
-        height: 17px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        right: 30%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    &__search:hover {
-        background-color: #a3bbc8;
+        &::before {
+            background-image: url(../images/icons/search-icon.svg);
+            right: 33%;
+            top: 55%;
+        }
+        &:hover {
+            background-color: #a3bbc8;
+        }
     }
     &__like {
         background-color: #fcd7b6;
         height: 52px;
         width: 90px;
-        border-radius: 40% 0 0 40%;
+        border-radius: 30% 0 0 30%;
         position: relative;
         border-right: 1px solid #fde7d3;
-    }
-    &__like::before {
-        position: absolute;
-        content: '';
-        background-image: url(../images/icons/like-icon.svg);
-        width: 17px;
-        height: 17px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        right: 33%;
-        top: 55%;
-        transform: translateY(-50%);
+        transition: background-color .3s;
+        &::before {
+            background-image: url(../images/icons/like-icon.svg);
+            top: 55%;
+            left: 40%;
+        }
+        &:hover {
+            background-color: #E6B960;
+        }
     }
     &__shopping {
         background-color: #fcd7b6;
         height: 52px;
         width: 90px;
-        border-radius: 0 40% 40% 0;
+        border-radius: 0 30% 30% 0;
         margin-right: 20px;
         position: relative;
+        transition: background-color .3s;
+        &::before {
+            background-image: url(../images/icons/shopping-icon.svg);
+            right: 40%;
+            top: 55%;
+        }
+        &:hover {
+            background-color: #E6B960;
+        }
     }
-    &__shopping::before {
+    &__search::before,
+    &__like::before,
+    &__shopping::before,
+    &__points::before {
         position: absolute;
         content: '';
-        background-image: url(../images/icons/shopping-icon.svg);
         width: 17px;
         height: 17px;
         background-size: contain;
         background-repeat: no-repeat;
-        right: 40%;
-        top: 50%;
         transform: translateY(-50%);
     }
     &__points {
@@ -102,21 +117,16 @@
         border-radius: 50%;
         transition: background-color .3s;
         position: relative;
-    }
-    &__points::before {
-        position: absolute;
-        content: '';
-        background-image: url(../images/icons/points-icon.svg);
-        width: 21px;
-        height: 21px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        right: 33%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    &__points:hover {
-        background-color: #a3bbc8;
+        &::before {
+            background-image: url(../images/icons/points-icon.svg);
+            width: 21px;
+            height: 21px;
+            right: 29%;
+            top: 50%;
+        }
+        &:hover {
+            background-color: #a3bbc8;
+        }
     }
     &__num {
         @extend %DMSans-400;
@@ -147,57 +157,54 @@
         margin: 0 auto;
     }
     &__content {
-        margin-top: -59px;
+        margin-top: -65px;
         max-width: 530px;
+        & p {
+            @extend %Rubik-400;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #436372;
+            margin-bottom: 50px;
+            max-width: 370px;
+            @extend %text-wrap;
+        }
     }
     &__title {
-        @extend %Rubick-500;
+        @extend %text-wrap;
+        @extend %Rubik-500;
         font-size: 72px;
         line-height: 1;
         color: #243f4d;
         text-transform: uppercase;
         margin-bottom: 25px;
     }
-    &__text {
-        @extend %Rubick-400;
-        font-size: 18px;
-        line-height: 1.6;
-        color: #436372;
-        margin-bottom: 50px;
-        max-width: 370px
-    }
     &__link {
-        @extend %Rubick-500;
-        font-size: 15px;
-        line-height: 0.9;
-        color: #fff;
-        background-color: #a3bbc8;
-        padding: 25px 100px 25px 30px;
         position: relative;
     }
     &__link::after {
         position: absolute;
         content: '';
         background-image: url(../images/icons/arrow.svg);
+        background-repeat: no-repeat;
         height: 10px;
         width: 25px;
         right: 20px;
         top: 28px;
     }
-    &__image {
+    &__blog {
         position: relative;
         z-index: 1;
-    }
-    &__image::after {
-        content: '';
-        border-radius: 50%;
-        background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        position: absolute;
-        width: 634px;
-        height: 634px;
-        z-index: -1;
-        top: -80%;
-        right: -16%;
+        &::after {
+            content: '';
+            border-radius: 50%;
+            background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+            position: absolute;
+            width: 634px;
+            height: 634px;
+            z-index: -1;
+            top: -80%;
+            right: -16%;
+        }
     }
 }
 
@@ -219,7 +226,7 @@
     color: #243f4d;
     margin-right: 12px;
     font-size: 11px;
-    @extend %Rubick-500;
+    @extend %Rubik-500;
 }
 
 .slick-active button {
@@ -235,7 +242,7 @@
 
 .positives {
     &__inner {
-        padding: 40px 0 40px;
+        padding: 40px 0 40px !important;
         display: flex;
         justify-content: space-around;
         background-color: #fef7f0;
@@ -252,6 +259,7 @@
         line-height: 2.2;
         color: #414141;
         font-size: 18px;
+        @extend %text-wrap;
     }
     &__text {
         max-width: 205px;
@@ -259,49 +267,42 @@
         font-size: 16px;
         color: #585858;
         line-height: 1.9;
+        @extend %text-wrap;
+        &--width {
+            max-width: 220px;
+        }
     }
-    &__text-width {
-        max-width: 220px;
-    }
-    &____item-support {
+    &__item--support {
         position: relative;
+        &::before {
+            background-image: url(../images/icons/hours.svg);
+            left: -76px;
+            top: 7px;
+        }
     }
-    &____item-support::before {
+    &__item--delivery {
+        position: relative;
+        &::before {
+            background-image: url(../images/icons/truck.svg);
+            top: 16px;
+            left: -82px;
+        }
+    }
+    &__item--secure {
+        position: relative;
+        &::before {
+            background-image: url(../images/icons/img.svg);
+            top: 7px;
+            left: -76px;
+        }
+    }
+    &__item--support::before,
+    &__item--delivery::before,
+    &__item--secure::before {
         position: absolute;
         content: '';
-        background-image: url(../images/icons/hours.svg);
         height: 55px;
         width: 55px;
-        top: 7px;
-        left: -76px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    &__item-delivery {
-        position: relative;
-    }
-    &____item-delivery::before {
-        position: absolute;
-        content: '';
-        background-image: url(../images/icons/truck.svg);
-        height: 55px;
-        width: 55px;
-        top: 16px;
-        left: -82px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    &____item-secure {
-        position: relative;
-    }
-    &____item-secure::before {
-        position: absolute;
-        content: '';
-        background-image: url(../images/icons/img.svg);
-        height: 55px;
-        width: 55px;
-        top: 7px;
-        left: -76px;
         background-repeat: no-repeat;
         background-size: contain;
     }
@@ -309,25 +310,9 @@
 
 .product {
     padding: 53px 0 190px;
-    &__title {
-        text-align: center;
-        margin-bottom: 22px;
-        @extend %DMSans-700;
-        font-size: 36px;
-        color: #191919;
-    }
     &__filter-btns {
         text-align: center;
         margin-bottom: 80px;
-    }
-    &__btn {
-        border: none;
-        background-color: transparent;
-        @extend %DMSans-700;
-        font-size: 16px;
-        color: #8b8b8b;
-        padding: 0;
-        cursor: pointer;
     }
     &__btn:not(:last-child) {
         margin-right: 25px;
@@ -360,7 +345,7 @@
     &__search,
     &__shop,
     &__like {
-        background-color: #fefefe;
+        background-color: #EAFAF3;
         height: 52px;
         width: 52px;
         border-radius: 50%;
@@ -377,31 +362,19 @@
         display: inline-block;
     }
     &__search::before {
-        position: absolute;
-        content: '';
         background-image: url(../images/icons/search-icon.svg);
-        width: 17px;
-        height: 17px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        top: 33%;
-        left: 30%;
     }
     &__shop::before {
-        position: absolute;
-        content: '';
         background-image: url(../images/icons/shopping-icon.svg);
-        width: 17px;
-        height: 17px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        top: 33%;
-        left: 30%;
     }
+    &__like::before {
+        background-image: url(../images/icons/like-icon.svg);
+    }
+    &__search::before,
+    &__shop::before,
     &__like::before {
         position: absolute;
         content: '';
-        background-image: url(../images/icons/like-icon.svg);
         width: 17px;
         height: 17px;
         background-size: contain;
@@ -413,6 +386,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        max-width: 230px;
     }
     &__img {
         margin: auto 0;
@@ -423,6 +397,7 @@
     &__name {
         font-size: 16px;
         color: #243f4d;
+        @extend %text-wrap;
     }
     &__price {
         @extend %DMSans-700;
@@ -460,22 +435,29 @@
     padding: 80px 0 70px;
     border-bottom: 1px solid #dae4e9;
     display: flex;
-    &__contact {
+    &--contact {
         margin-right: 90px;
         max-width: 210px;
         color: #7b7b7b;
     }
-    &__nav {
+    &--nav {
         width: 158px;
         margin-right: 139px;
     }
     &__link {
         font-size: 14px;
-        @extend %Rubick-400;
+        @extend %Rubik-400;
         line-height: 2.3;
         color: #7b7b7b;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            color: #000;
+        }
     }
-    &__items-form {
+    &__items--form {
         max-width: 290px
     }
     &__logo {
@@ -495,16 +477,24 @@
     &__phone,
     &__email {
         font-size: 14px;
-        @extend %Rubick-400;
+        @extend %Rubik-400;
         line-height: 2.2;
         color: #7b7b7b;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            color: #000
+        }
     }
     &__text {
-        @extend %Rubick-400;
+        @extend %Rubik-400;
         font-size: 14px;
         line-height: 1.7;
         margin-bottom: 35px;
         max-width: 240px;
+        @extend %text-wrap;
     }
     &__form {
         display: inline;
@@ -521,15 +511,23 @@
         @extend %DMSans-400;
         font-size: 12px;
         color: #234969;
+        outline: transparent;
     }
     &__form-btn {
         border: none;
-        background-color: #234969;
+        background-color: #a3bbc8;
         color: #fff;
         padding: 12px 18px;
         @extend %DMSans-400;
         font-size: 14px;
         cursor: pointer;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            background-color: #373CEB;
+        }
     }
 }
 
@@ -537,16 +535,23 @@
     padding: 36px 0 36px;
     display: flex;
     justify-content: space-between;
-    @extend %Rubick-500;
+    @extend %Rubik-500;
     font-size: 14px;
     color: #7b7b7b;
     &__list {
         display: flex;
     }
     &__link {
-        @extend %Rubick-500;
+        @extend %Rubik-500;
         font-size: 14px;
         color: #7b7b7b;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            color: #000;
+        }
     }
     &__item:not(:last-child) {
         padding-right: 15px;
