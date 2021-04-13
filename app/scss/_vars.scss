@@ -35,6 +35,10 @@
     overflow: hidden;
 }
 
+%color {
+    color: #7b7b7b;
+}
+
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }

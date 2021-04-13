@@ -9,6 +9,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    line-height: 1.3;
+    background-color: #fff;
 }
 
 main {
@@ -19,12 +21,9 @@ main {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
-}
-
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    &--sm {
+        max-width: 1200px;
+    }
 }
 
 .visually-hidden {
@@ -44,7 +43,9 @@ button {
     outline: transparent;
 }
 
-link {
+link,
+a,
+input {
     outline: transparent;
 }
 
