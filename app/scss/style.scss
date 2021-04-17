@@ -495,7 +495,7 @@
         width: 372px;
         height: 248px;
         background-color: #f8f8f8;
-        padding: 40px 0 0 40px;
+        padding: 32px 0 0 35px;
         overflow: hidden;
     }
     &__descr {
@@ -520,14 +520,42 @@
             width: 360px;
             background-repeat: no-repeat;
             background-size: contain;
-            background-image: url(../images/main/design/2.png);
             top: -20px;
+        }
+        &--1::after {
+            background-image: url(../images/main/design/1.png);
+        }
+        &--2::after {
+            background-image: url(../images/main/design/2.png);
+            top: -10px;
+            height: 120px;
+        }
+        &--3::after {
+            background-image: url(../images/main/design/3.png);
+            top: -43px;
+            left: 110px;
+        }
+        &--4::after {
+            background-image: url(../images/main/design/4.png);
+            left: 15px;
+        }
+        &--5::after {
+            background-image: url(../images/main/design/5.png);
+            height: 180px;
+            top: -64px;
+            left: 108px;
+        }
+        &--6::after {
+            background-image: url(../images/main/design/6.png);
+            left: 18px;
+            height: 115px;
+            top: 0;
         }
     }
 }
 
 .video {
-    padding: 60px 0 60px;
+    padding: 50px 0 60px;
     &__watch {
         background-repeat: no-repeat;
         background-position: center center;
@@ -544,6 +572,37 @@
             right: 50%;
             transform: translateX(50%);
         }
+    }
+}
+
+.insights {
+    padding: 50px 15px;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 28px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & p {
+            max-width: 320px;
+            padding: 40px 0 15px 35px;
+        }
+    }
+    &__about {
+        border-top: 1px solid #e0e0e0;
+        padding-top: 20px;
+    }
+    &__text {
+        display: inline-block;
     }
 }
 
