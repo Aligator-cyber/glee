@@ -3,7 +3,24 @@ $(function() {
         dots: true,
         arrows: false,
     })
-    var mixer = mixitup('.product__items');
 
-    var mixer = mixitup('.design__items');
+    var blogEl1 = document.querySelector('[data-ref="blog-1"]');
+    var blogEl2 = document.querySelector('[data-ref="blog-2"]');
+
+    var config = {
+        controls: {
+            scope: 'local'
+        }
+    };
+
+    var mixer1 = mixitup(blogEl1, config);
+    var mixer2 = mixitup(blogEl2, config);
+
+    $('.insights__inner').slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+
+    })
 })
