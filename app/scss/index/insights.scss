@@ -1,0 +1,112 @@
+.insights {
+    padding: 47px 15px;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 16px;
+        color: #262626;
+        margin-right: 27px;
+        position: relative;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            color: #000;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            height: 12px;
+            width: 7px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../images/icons/arrow-insights.svg);
+            left: 80px;
+        }
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+    &__item {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: #fff;
+        &::before {
+            position: absolute;
+            content: 'news';
+            padding: 5px 30px;
+            background-color: #a3bbc8;
+            border-radius: 25%;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            top: 59%;
+            right: 65%;
+        }
+        & p {
+            max-width: 320px;
+            padding: 35px 0 15px 30px;
+            color: #262626;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+    &__about {
+        border-top: 1px solid #e0e0e0;
+        padding: 7px 0 0 40px;
+        @extend %Rubik-400;
+        @extend %text-wrap;
+        font-size: 12px;
+        line-height: 2.1;
+        margin-bottom: 12px;
+    }
+    &__text {
+        display: inline-block;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            height: 9px;
+            width: 6px;
+            bottom: 9px;
+            left: -11px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../images/icons/icon-hz.png);
+        }
+    }
+    &__text:not(:last-child) {
+        margin-right: 44px;
+    }
+    &__slider {
+        text-align: -webkit-center;
+    }
+    &__inner {
+        margin-left: 35px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            height: 440px;
+            width: 1920px;
+            background-color: #fef7f0;
+            z-index: -1;
+            top: -312%;
+            left: -35%;
+        }
+    }
+}

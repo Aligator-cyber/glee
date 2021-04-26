@@ -1,0 +1,171 @@
+.footer-top {
+    padding: 100px 0 70px;
+    border-bottom: 1px solid #dae4e9;
+    display: flex;
+    &--contact {
+        margin-right: 90px;
+        max-width: 210px;
+        @extend %color;
+    }
+    &--nav {
+        width: 158px;
+        margin-right: 139px;
+    }
+    &__link {
+        font-size: 14px;
+        @extend %Rubik-400;
+        line-height: 2.3;
+        @extend %color;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            color: #000;
+        }
+    }
+    &__items--form {
+        max-width: 290px
+    }
+    &__logo {
+        margin-bottom: 20px;
+        display: block;
+    }
+    &__title {
+        margin-bottom: 13px;
+        color: #1f2044;
+        @extend %DMSans-700;
+        font-size: 16px;
+        line-height: 2.9;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+    &__contacts {
+        font-size: 14px;
+        @extend %Rubik-400;
+        line-height: 2.2;
+        @extend %color;
+        max-width: 200px;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            color: #000
+        }
+    }
+    &__text {
+        @extend %Rubik-400;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 7px 0 34px 0;
+        ;
+        max-width: 240px;
+        @extend %text-wrap;
+    }
+    &__form {
+        display: inline;
+    }
+    &__form-input {
+        max-width: 170px;
+        width: 100%;
+        max-height: 40px;
+        background-color: #fef7f0;
+        border: none;
+        padding: 15px;
+    }
+    &__form-input::placeholder {
+        @extend %DMSans-400;
+        font-size: 12px;
+        color: #234969;
+        outline: transparent;
+    }
+    &__form-btn {
+        border: none;
+        background-color: #a3bbc8;
+        color: #fff;
+        padding: 12px 18px;
+        @extend %DMSans-400;
+        font-size: 14px;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            background-color: #373CEB;
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 36px 0 36px;
+    display: flex;
+    justify-content: space-between;
+    @extend %Rubik-500;
+    font-size: 14px;
+    @extend %color;
+    &__list {
+        display: flex;
+    }
+    &__link {
+        @extend %Rubik-500;
+        font-size: 14px;
+        @extend %color;
+        padding: 0 15px;
+        display: inline-block;
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+        &:active {
+            color: #000;
+        }
+    }
+    &__item:not(:last-child) {
+        border-right: 1px solid #7b7b7b;
+    }
+}
+
+@media(max-width:1199px) {
+    .footer-top {
+        flex-wrap: wrap;
+        &__items {
+            &--form {
+                max-width: 100%;
+                margin-top: 30px;
+            }
+        }
+        &__text {
+            max-width: 100%;
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .footer-top {
+        &--contact {
+            max-width: 100%;
+        }
+    }
+    .footer-bottom {
+        &__item:not(:last-child) {
+            border: none;
+        }
+    }
+}
+
+@media(max-width:600px) {
+    .footer-bottom {
+        & p {
+            max-width: 150px;
+        }
+        padding: 10px 0 0;
+        &__list {
+            display: block;
+        }
+        &__item {
+            margin-bottom: 10px;
+        }
+    }
+}
