@@ -10,11 +10,37 @@
             position: absolute;
             content: '';
             background-image: url(../images/icons/play-icon.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
             height: 130px;
             width: 130px;
             top: 37%;
             right: 50%;
             transform: translateX(50%);
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .video {
+        &__watch {
+            min-height: 420px;
+            &::before {
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media(max-width:440px) {
+    .video {
+        padding: 0;
+        &__watch {
+            min-height: 390px;
+            &::before {
+                height: 80px;
+                right: 42%;
+            }
         }
     }
 }

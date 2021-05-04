@@ -1,66 +1,135 @@
-.positives {
-    &__inner {
-        padding: 27px 0 40px !important;
-        display: flex;
-        justify-content: space-around;
-        background-color: #fef7f0;
-        align-items: center;
-    }
-    &__item {
-        margin-left: 200px;
-        min-width: 345px;
-    }
-    &__item:not(:last-child) {
-        border-right: 1px solid #e8e4df;
-    }
-    &__title {
-        @extend %DMSans-700;
-        line-height: 2.2;
-        color: #414141;
-        font-size: 18px;
-        @extend %text-wrap;
-    }
-    &__text {
-        max-width: 205px;
-        @extend %DMSans-400;
-        font-size: 16px;
-        color: #585858;
-        line-height: 1.9;
-        @extend %text-wrap;
-        &--width {
-            max-width: 220px;
-        }
-    }
-    &__item--support {
-        position: relative;
-        &::before {
-            background-image: url(../images/icons/hours.svg);
-            left: -76px;
-            top: 7px;
-        }
-    }
-    &__item--delivery {
-        position: relative;
-        &::before {
-            background-image: url(../images/icons/truck.svg);
-            top: 16px;
-            left: -82px;
-        }
-    }
-    &__item--secure {
-        position: relative;
-        &::before {
-            background-image: url(../images/icons/img.svg);
-            top: 7px;
-            left: -76px;
-        }
-    }
-    &__item::before {
-        position: absolute;
-        content: '';
-        height: 55px;
-        width: 55px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-}
+                        .positives {
+                            background-color: #fef7f0;
+                            &__inner {
+                                padding: 27px 0 40px !important;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                            }
+                            &__item {
+                                margin-left: 200px;
+                                min-width: 345px;
+                            }
+                            &__item:not(:last-child) {
+                                border-right: 1px solid #e8e4df;
+                            }
+                            &__title {
+                                @extend %DMSans-700;
+                                line-height: 2.2;
+                                color: #414141;
+                                font-size: 18px;
+                                @extend %text-wrap;
+                            }
+                            &__text {
+                                max-width: 205px;
+                                @extend %DMSans-400;
+                                font-size: 16px;
+                                color: #585858;
+                                line-height: 1.9;
+                                @extend %text-wrap;
+                                &--width {
+                                    max-width: 220px;
+                                }
+                            }
+                            &__item--support {
+                                position: relative;
+                                &::before {
+                                    background-image: url(../images/icons/hours.svg);
+                                    left: -76px;
+                                    top: 7px;
+                                }
+                            }
+                            &__item--delivery {
+                                position: relative;
+                                &::before {
+                                    background-image: url(../images/icons/truck.svg);
+                                    top: 16px;
+                                    left: -82px;
+                                }
+                            }
+                            &__item--secure {
+                                position: relative;
+                                &::before {
+                                    background-image: url(../images/icons/img.svg);
+                                    top: 7px;
+                                    left: -76px;
+                                }
+                            }
+                            &__item::before {
+                                position: absolute;
+                                content: '';
+                                height: 55px;
+                                width: 55px;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                        
+                        @media(max-width:1440px) {
+                            .positives {
+                                &__item {
+                                    margin-left: 130px;
+                                    min-width: 270px;
+                                }
+                            }
+                        }
+                        
+                        @media(max-width:1199px) {
+                            .positives {
+                                &__item {
+                                    margin-left: 80px;
+                                    min-width: 220px;
+                                    &::before {
+                                        left: -60px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        @media(max-width:991px) {
+                            .positives {
+                                &__inner {
+                                    padding: 18px 0 24px !important;
+                                }
+                                &__title {
+                                    line-height: 1.5;
+                                }
+                                &__item {
+                                    margin-left: 60px;
+                                    min-width: 180px;
+                                    &::before {
+                                        content: none;
+                                    }
+                                }
+                                &__text {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                        
+                        @media(max-width:991px) {
+                            .positives {
+                                &__inner {
+                                    display: inline-block;
+                                    width: 100%;
+                                    text-align: center
+                                }
+                                &__item {
+                                    margin-bottom: 15px;
+                                }
+                                &__item:not(:last-child) {
+                                    border-right: none;
+                                }
+                                &__text {
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                        
+                        @media(max-width:600px) {
+                            .positives {
+                                &__inner {
+                                    text-align: left;
+                                }
+                            }
+                        }

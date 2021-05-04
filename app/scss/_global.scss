@@ -96,3 +96,19 @@ input {
 img {
     object-fit: cover;
 }
+
+@media(max-width:767px) {
+    .button {
+        font-size: 11px;
+        padding: 20px 100px 20px 19px
+    }
+    .titles {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:440px) {
+    .titles {
+        font-size: 26px;
+    }
+}
