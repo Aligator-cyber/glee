@@ -5,13 +5,56 @@
                                 display: flex;
                                 justify-content: space-around;
                                 align-items: center;
+                                @media(max-width: 991px) {
+                                    padding: 18px 0 24px !important;
+                                }
+                                @media(max-width:768px) {
+                                    display: inline-block;
+                                    width: 100%;
+                                    text-align: center
+                                }
+                                @media(max-width:600px) {
+                                    text-align: left;
+                                }
                             }
                             &__item {
                                 margin-left: 200px;
                                 min-width: 345px;
+                                @media(max-width: 1440px) {
+                                    margin-left: 130px;
+                                    min-width: 270px;
+                                }
+                                @media(max-width:1199px) {
+                                    margin-left: 80px;
+                                    min-width: 220px;
+                                }
+                                @media(max-width:991px) {
+                                    margin-left: 60px;
+                                    min-width: 180px;
+                                }
+                                @media(max-width:768px) {
+                                    margin-bottom: 15px;
+                                }
+                                &::before {
+                                    position: absolute;
+                                    content: '';
+                                    height: 55px;
+                                    width: 55px;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    @media(max-width: 1199px) {
+                                        left: -60px;
+                                    }
+                                    @media(max-width:991px) {
+                                        content: none;
+                                    }
+                                }
                             }
                             &__item:not(:last-child) {
                                 border-right: 1px solid #e8e4df;
+                                @media(max-width: 768px) {
+                                    border-right: none;
+                                }
                             }
                             &__title {
                                 @extend %DMSans-700;
@@ -19,6 +62,9 @@
                                 color: #414141;
                                 font-size: 18px;
                                 @extend %text-wrap;
+                                @media(max-width: 991px) {
+                                    line-height: 1.5;
+                                }
                             }
                             &__text {
                                 max-width: 205px;
@@ -27,8 +73,17 @@
                                 color: #585858;
                                 line-height: 1.9;
                                 @extend %text-wrap;
+                                @media(max-width: 991px) {
+                                    margin-right: 10px;
+                                }
+                                @media(max-width:768px) {
+                                    max-width: 100%;
+                                }
                                 &--width {
                                     max-width: 220px;
+                                    @media(max-width: 768px) {
+                                        max-width: 100%;
+                                    }
                                 }
                             }
                             &__item--support {
@@ -53,83 +108,6 @@
                                     background-image: url(../images/icons/img.svg);
                                     top: 7px;
                                     left: -76px;
-                                }
-                            }
-                            &__item::before {
-                                position: absolute;
-                                content: '';
-                                height: 55px;
-                                width: 55px;
-                                background-repeat: no-repeat;
-                                background-size: contain;
-                            }
-                        }
-                        
-                        @media(max-width:1440px) {
-                            .positives {
-                                &__item {
-                                    margin-left: 130px;
-                                    min-width: 270px;
-                                }
-                            }
-                        }
-                        
-                        @media(max-width:1199px) {
-                            .positives {
-                                &__item {
-                                    margin-left: 80px;
-                                    min-width: 220px;
-                                    &::before {
-                                        left: -60px;
-                                    }
-                                }
-                            }
-                        }
-                        
-                        @media(max-width:991px) {
-                            .positives {
-                                &__inner {
-                                    padding: 18px 0 24px !important;
-                                }
-                                &__title {
-                                    line-height: 1.5;
-                                }
-                                &__item {
-                                    margin-left: 60px;
-                                    min-width: 180px;
-                                    &::before {
-                                        content: none;
-                                    }
-                                }
-                                &__text {
-                                    margin-right: 10px;
-                                }
-                            }
-                        }
-                        
-                        @media(max-width:991px) {
-                            .positives {
-                                &__inner {
-                                    display: inline-block;
-                                    width: 100%;
-                                    text-align: center
-                                }
-                                &__item {
-                                    margin-bottom: 15px;
-                                }
-                                &__item:not(:last-child) {
-                                    border-right: none;
-                                }
-                                &__text {
-                                    max-width: 100%;
-                                }
-                            }
-                        }
-                        
-                        @media(max-width:600px) {
-                            .positives {
-                                &__inner {
-                                    text-align: left;
                                 }
                             }
                         }

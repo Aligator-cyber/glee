@@ -6,6 +6,12 @@
         min-height: 500px;
         position: relative;
         background-size: cover;
+        @media(max-width: 767px) {
+            min-height: 420px;
+        }
+        @media(max-width:440px) {
+            padding: 0;
+        }
         &::before {
             position: absolute;
             content: '';
@@ -17,27 +23,10 @@
             top: 37%;
             right: 50%;
             transform: translateX(50%);
-        }
-    }
-}
-
-@media(max-width:767px) {
-    .video {
-        &__watch {
-            min-height: 420px;
-            &::before {
+            @media(max-width: 767px) {
                 height: 100px;
             }
-        }
-    }
-}
-
-@media(max-width:440px) {
-    .video {
-        padding: 0;
-        &__watch {
-            min-height: 390px;
-            &::before {
+            @media(max-width:440px) {
                 height: 80px;
                 right: 42%;
             }

@@ -2,10 +2,16 @@
     padding: 100px 0 70px;
     border-bottom: 1px solid #dae4e9;
     display: flex;
+    @media(max-width: 1199px) {
+        flex-wrap: wrap;
+    }
     &--contact {
         margin-right: 90px;
         max-width: 210px;
         @extend %color;
+        @media(max-width: 991px) {
+            max-width: 100%;
+        }
     }
     &--nav {
         width: 158px;
@@ -25,7 +31,11 @@
         }
     }
     &__items--form {
-        max-width: 290px
+        max-width: 290px;
+        @media(max-width: 1199px) {
+            max-width: 100%;
+            margin-top: 30px;
+        }
     }
     &__logo {
         margin-bottom: 20px;
@@ -59,9 +69,11 @@
         font-size: 14px;
         line-height: 1.7;
         margin: 7px 0 34px 0;
-        ;
         max-width: 240px;
         @extend %text-wrap;
+        @media(max-width: 1199px) {
+            max-width: 100%;
+        }
     }
     &__form {
         display: inline;
@@ -107,6 +119,9 @@
     @extend %color;
     &__list {
         display: flex;
+        @media(max-width: 600px) {
+            display: block;
+        }
     }
     &__link {
         @extend %Rubik-500;
@@ -122,50 +137,21 @@
             color: #000;
         }
     }
+    &__item {
+        @media(max-width: 600px) {
+            margin-bottom: 10px;
+        }
+    }
     &__item:not(:last-child) {
         border-right: 1px solid #7b7b7b;
-    }
-}
-
-@media(max-width:1199px) {
-    .footer-top {
-        flex-wrap: wrap;
-        &__items {
-            &--form {
-                max-width: 100%;
-                margin-top: 30px;
-            }
-        }
-        &__text {
-            max-width: 100%;
-        }
-    }
-}
-
-@media(max-width:991px) {
-    .footer-top {
-        &--contact {
-            max-width: 100%;
-        }
-    }
-    .footer-bottom {
-        &__item:not(:last-child) {
+        @media(max-width: 991px) {
             border: none;
         }
     }
-}
-
-@media(max-width:600px) {
-    .footer-bottom {
-        & p {
+    & p {
+        @media(max-width: 600px) {
             max-width: 150px;
-        }
-        padding: 10px 0 0;
-        &__list {
-            display: block;
-        }
-        &__item {
-            margin-bottom: 10px;
+            padding: 10px 0 0;
         }
     }
 }
