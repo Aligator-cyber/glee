@@ -1,0 +1,85 @@
+.about {
+    padding: 50px 0 200px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30px;
+        height: 125px;
+        background-color: #edf1f4;
+        z-index: -1;
+    }
+    &__title {
+        text-align: center;
+        color: #4c4c4c;
+        @extend %Rubik-300;
+        font-size: 36px;
+        line-height: 1.5;
+    }
+    &__subtitle {
+        display: block;
+        text-align: center;
+        color: #222933;
+        font-size: 14px;
+        line-height: 1.4;
+        @extend %Rubik-400;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 150px;
+    }
+    &__pic {
+        background-image: url(../../images/about/bg-img.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: contain;
+        height: 680px;
+        width: 47%;
+    }
+    &__inner {
+        max-width: 560px;
+    }
+    &__item {
+        display: flex;
+        align-items: center
+    }
+    &__num {
+        @extend %Rubik-700;
+        font-size: 140px;
+        color: #a3bbc8;
+    }
+    &__about {
+        max-width: 100px;
+        color: #243f4d;
+    }
+    &__info {
+        line-height: 2;
+        font-size: 16px;
+        @extend %Rubik-500;
+    }
+    &__name {
+        @extend %DMSans-700;
+        font-size: 36px;
+        line-height: 1.1;
+        margin-bottom: 45px;
+    }
+    &__text p {
+        font-size: 16px;
+        @extend %Rubik-500;
+        line-height: 2;
+        margin-bottom: 70px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__progress {
+        max-width: 100px;
+    }
+    &__amount {
+        font-size: 36px;
+    }
+}
