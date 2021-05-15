@@ -19,10 +19,9 @@
     }
     
     .menu {
-        margin-bottom: 7px;
+        margin: 0 0 7px 40px;
         @media (max-width: 1199px) {
             order: 1;
-            margin-left: 40px;
         }
         @media (max-width:600px) {
             order: 0;

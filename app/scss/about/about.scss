@@ -1,5 +1,5 @@
 .about {
-    padding: 50px 0 200px;
+    padding: 45px 0 200px;
     position: relative;
     &::before {
         content: '';
@@ -17,6 +17,7 @@
         @extend %Rubik-300;
         font-size: 36px;
         line-height: 1.5;
+        @extend %text-wrap;
     }
     &__subtitle {
         display: block;
@@ -25,6 +26,7 @@
         font-size: 14px;
         line-height: 1.4;
         @extend %Rubik-400;
+        @extend %text-wrap;
     }
     &__content {
         display: flex;
@@ -37,47 +39,94 @@
         background-position: left top;
         background-size: contain;
         height: 680px;
-        width: 47%;
+        width: 49%;
     }
     &__inner {
-        max-width: 560px;
+        max-width: 550px;
+        padding-top: 46px;
     }
     &__item {
         display: flex;
-        align-items: center
+        align-items: center;
+        justify-content: space-between;
+        max-width: 280px;
+        margin-bottom: 8px;
     }
     &__num {
         @extend %Rubik-700;
         font-size: 140px;
         color: #a3bbc8;
+        @extend %text-wrap;
     }
     &__about {
         max-width: 100px;
         color: #243f4d;
+        padding-top: 22px;
+        @extend %Rubik-500;
+        @extend %text-wrap;
     }
     &__info {
         line-height: 2;
         font-size: 16px;
         @extend %Rubik-500;
+        @extend %text-wrap;
     }
     &__name {
         @extend %DMSans-700;
         font-size: 36px;
-        line-height: 1.1;
-        margin-bottom: 45px;
+        line-height: 1;
+        margin-bottom: 33px;
+        @extend %text-wrap;
     }
-    &__text p {
-        font-size: 16px;
-        @extend %Rubik-500;
-        line-height: 2;
-        margin-bottom: 70px;
+    &__text {
+        margin-bottom: 85px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 500px;
+            background-color: #ebeef3;
+            bottom: -57px;
+        }
+        & p {
+            font-size: 16px;
+            @extend %Rubik-500;
+            line-height: 2;
+        }
     }
     &__items {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin-left: 50px;
     }
     &__progress {
         max-width: 100px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            height: 40px;
+            width: 40px;
+            background-size: contain;
+            right: 115px;
+            top: 8px;
+        }
+        &--progect::before {
+            background-image: url(../../images/icons/about/1.svg);
+            background-repeat: no-repeat;
+        }
+        &--revenue::before {
+            background-image: url(../../images/icons/about/2.svg);
+            background-repeat: no-repeat;
+        }
+        &--awards::before {
+            background-image: url(../../images/icons/about/3.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    &__progress:not(:last-child) {
+        border-right: 1px solid #e6eaf0;
     }
     &__amount {
         font-size: 36px;
