@@ -1,5 +1,5 @@
 .about {
-    padding: 45px 0 400px;
+    padding: 45px 0 100px;
     position: relative;
     &::before {
         content: '';
@@ -14,7 +14,7 @@
     &::after {
         position: absolute;
         content: '';
-        bottom: 322px;
+        bottom: 27px;
         left: 0;
         right: 0;
         background-color: #fcd7b6;
@@ -190,5 +190,58 @@
         line-height: 1.1;
         display: inherit;
         margin-bottom: 20px;
+    }
+}
+
+.team {
+    padding: 96px 0 70px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-bottom: 30px;
+        color: #243f4d;
+        text-align: left;
+    }
+    &__text {
+        max-width: 300px;
+        line-height: 2;
+        margin-bottom: 30px;
+    }
+    &__link {
+        @extend %Poppins-600;
+        font-size: 15px;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        background-color: #fdfdfd;
+    }
+    &__item {
+        min-height: 380px;
+    }
+    &__box {
+        height: 110px;
+        width: 300px;
+        background-color: #ffffff;
+        margin-top: -40px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        padding-left: 25px;
+    }
+    &__name {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    &__vacancy {
+        font-size: 16px;
+        @extend %Rubik-500;
     }
 }
