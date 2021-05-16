@@ -1,5 +1,5 @@
 .about {
-    padding: 45px 0 200px;
+    padding: 45px 0 400px;
     position: relative;
     &::before {
         content: '';
@@ -9,6 +9,16 @@
         top: 30px;
         height: 125px;
         background-color: #edf1f4;
+        z-index: -1;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 322px;
+        left: 0;
+        right: 0;
+        background-color: #fcd7b6;
+        height: 320px;
         z-index: -1;
     }
     &__title {
@@ -31,7 +41,7 @@
     &__content {
         display: flex;
         justify-content: space-between;
-        padding-top: 150px;
+        padding: 150px 0 280px;
     }
     &__pic {
         background-image: url(../../images/about/bg-img.png);
@@ -111,18 +121,16 @@
             background-size: contain;
             right: 115px;
             top: 8px;
+            background-repeat: no-repeat;
         }
         &--progect::before {
             background-image: url(../../images/icons/about/1.svg);
-            background-repeat: no-repeat;
         }
         &--revenue::before {
             background-image: url(../../images/icons/about/2.svg);
-            background-repeat: no-repeat;
         }
         &--awards::before {
             background-image: url(../../images/icons/about/3.svg);
-            background-repeat: no-repeat;
         }
     }
     &__progress:not(:last-child) {
@@ -130,5 +138,57 @@
     }
     &__amount {
         font-size: 36px;
+    }
+    &__benefits {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        font-weight: 700;
+    }
+    &__box {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            height: 70px;
+            width: 65px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: -75px;
+            left: 34px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            height: 34px;
+            width: 34px;
+            border-radius: 50%;
+            background-color: #a3bbc8;
+            top: -47px;
+            left: 70px;
+            opacity: 0.9;
+        }
+        &--rate::before {
+            background-image: url(../../images/icons/about/rating.svg);
+        }
+        &--delivery::before {
+            background-image: url(../../images/icons/about/delivery.svg);
+            top: -66px;
+            left: 21px;
+        }
+        &--pluses::before {
+            background-image: url(../../images/icons/about/time.svg);
+        }
+        &--brand::before {
+            background-image: url(../../images/icons/about/medal.svg);
+            top: -81px;
+            left: 37px;
+        }
+    }
+    &__statistic {
+        font-size: 36px;
+        line-height: 1.1;
+        display: inherit;
+        margin-bottom: 20px;
     }
 }
