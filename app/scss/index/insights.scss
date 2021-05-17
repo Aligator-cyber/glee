@@ -19,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 17px;
         @media(max-width: 600px) {
             display: block;
         }
@@ -83,7 +83,7 @@
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 700;
-            top: 59%;
+            top: 57%;
             right: 65%;
             @media(max-width: 1199px) {
                 content: none;
@@ -91,7 +91,7 @@
         }
         & p {
             max-width: 320px;
-            padding: 35px 0 15px 30px;
+            padding: 35px 0 12px 30px;
             color: #262626;
             display: -webkit-box;
             -webkit-line-clamp: 3;
@@ -108,7 +108,7 @@
     }
     &__about {
         border-top: 1px solid #e0e0e0;
-        padding: 7px 0 0 40px;
+        padding: 11px 0 0 46px;
         @extend %Rubik-400;
         @extend %text-wrap;
         font-size: 12px;
