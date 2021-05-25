@@ -21,10 +21,10 @@
         height: 320px;
         z-index: -1;
         @media(max-width: 767px) {
-            bottom: 57px;
+            bottom: 30px;
         }
         @media(max-width: 360px) {
-            bottom: 87px;
+            bottom: 50px;
         }
     }
     &__title {
@@ -52,7 +52,7 @@
             padding: 70px 0 200px;
         }
         @media(max-width: 600px) {
-            padding: 70px 0 100px;
+            padding: 20px 0 100px;
         }
     }
     &__pic {
@@ -75,6 +75,9 @@
         padding-top: 46px;
         @media(max-width: 991px) {
             max-width: 100%;
+        }
+        @media(max-width: 600px) {
+            padding: 0;
         }
     }
     &__item {
@@ -282,102 +285,5 @@
         @extend %Rubik-500;
         font-size: 14px;
         line-height: 1.7;
-    }
-}
-
-.team {
-    padding: 96px 0 68px;
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__items {
-        margin-left: -5px;
-    }
-    &__title {
-        margin-bottom: 19px;
-        color: #243f4d;
-        text-align: left;
-    }
-    &__text {
-        max-width: 320px;
-        line-height: 1.9;
-        margin-bottom: 33px;
-        font-size: 16px;
-        @extend %Rubik-500;
-    }
-    &__link {
-        @extend %Poppins-600;
-        font-size: 15px;
-        padding: 20px 59px 18px 18px;
-    }
-    &__content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 40px;
-        background-color: #fdfdfd;
-    }
-    &__item {
-        min-height: 380px;
-    }
-    &__box {
-        height: 97px;
-        width: 327px;
-        background-color: #ffffff;
-        margin-top: -46px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        justify-content: center;
-        padding-left: 25px;
-        position: relative;
-    }
-    &__name {
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 2.4;
-    }
-    &__vacancy {
-        font-size: 16px;
-        @extend %Rubik-500;
-    }
-    &__dot,
-    &__dot2 {
-        position: absolute;
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background-color: #f6f6f6;
-        right: 70px;
-        top: 35px;
-        &:hover,
-        &:focus {
-            opacity: 0.7;
-        }
-        &:active {
-            background-color: #fff;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            width: 17px;
-            height: 17px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-image: url(../../images/icons/about/instagram.svg);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    &__dot2 {
-        right: 24px;
-        &::after {
-            width: 24px;
-            height: 14px;
-            background-image: url(../../images/icons/about/google.svg);
-        }
     }
 }
