@@ -1,0 +1,38 @@
+.top {
+    position: relative;
+    min-height: 155px;
+}
+
+.shop {
+    padding: 105px 0 125px;
+    &__inner {
+        display: flex;
+    }
+    &__filters {
+        width: 270px;
+        margin-right: 20px;
+    }
+}
+
+.category {
+    &__item {}
+    &__list {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn {
+        padding-left: 14px;
+        @extend %Rubik-500;
+        font-size: 16px;
+        line-height: 2.6;
+        color: #243f4d;
+        height: 42px;
+        border-radius: 10%;
+        background-color: #fff;
+        text-align: left;
+        &:hover {
+            background-color: #edf1f4;
+        }
+    }
+}

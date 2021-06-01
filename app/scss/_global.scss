@@ -76,6 +76,11 @@ input {
     @extend %text-wrap;
 }
 
+.title {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
 .filter-btn {
     border: none;
     background-color: transparent;

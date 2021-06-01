@@ -15,6 +15,11 @@
         bottom: -15px;
     }
     padding: 47px 15px;
+    &--products::before {
+        top: 0;
+        bottom: 0;
+        height: 250px;
+    }
     &__box {
         display: flex;
         justify-content: space-between;
